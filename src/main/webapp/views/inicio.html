@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="/logout">Cerrar sesión</a>
+</div>
+
+<div id="adminSection" style="display: none;">
+    <h2>Bienvenido, Administrador</h2>
+    <p>Contenido exclusivo para administradores.</p>
+</div>
+
+<div id="contableSection" style="display: none;">
+    <h2>Bienvenido, Contable</h2>
+    <p>Contenido exclusivo para contables.</p>
+</div>
+
+<div id="jefeSection" style="display: none;">
+    <h2>Bienvenido, Jefe de Departamento</h2>
+    <p>Contenido exclusivo para jefes de departamento.</p>
+</div>
+
+<script>
+    window.onload = function () {
+        // Obtener el rol del usuario desde la URL
+        const rolUsuario = new URLSearchParams(window.location.search).get("rol_usuario");
+
+        // Mostrar la sección correspondiente al rol
+        if (rolUsuario === "Administrador") {
+            document.getElementById("adminSection").style.display = "block";
+        } else if (rolUsuario === "Contable") {
+            document.getElementById("contableSection").style.display = "block";
+        } else if (rolUsuario === "Jefe de Departamento") {
+            document.getElementById("jefeSection").style.display = "block";
+        } else {
+            console.error("Rol desconocido: " + rolUsuario);
+        }
+    };
+</script>
+
+</body>
+</html>
+

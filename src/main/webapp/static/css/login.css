@@ -1,0 +1,145 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  body {
+    background: #f4f4f4;
+  }
+
+  .container {
+    display: flex;
+    height: 100vh;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+
+  .login-left, .login-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-left {
+    padding: 40px;
+    flex-direction: column;
+  }
+
+  .logo-top {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+  }
+
+  .logo-top img {
+    height: 80px;   /* Tamaño adecuado para la cabecera */
+    width: auto;
+    object-fit: contain;
+  }
+
+  .titulo-gestion {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: -50px;
+  }
+
+  .subtitulo-gestion {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .gestion {
+    color: #DC001B;
+  }
+
+  .presupuestos {
+    color: #3d4f5e;
+  }
+
+  .login-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .login-header p {
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .login-form p {
+    font-size: 14px;
+    color: #0a0808;
+    font-weight: 600;
+    margin-bottom: -10px;
+  }
+
+  .login-form input {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .form-options a {
+    text-decoration: none;
+    color: #666;
+  }
+
+  button {
+    background: #DC001B;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background: #b10017;
+  }
+
+  .signup {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .login-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .login-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 100vh;
+    border-radius: 12px;
+  }

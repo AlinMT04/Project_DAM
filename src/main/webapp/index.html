@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="icon" href="static/assets/logo_favicon.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/login.css" />
+</head>
+<body>
+<div class="container">
+    <div class="login-left">
+        <div class="logo-top">
+            <img src="static/assets/login-left_salesianos.jpg" alt="Logo" />
+        </div>
+        <h1 class="titulo-gestion">
+            <span class="gestion">GESTIÓN</span>
+        </h1>
+        <h2 class="subtitulo-gestion">
+            <span class="presupuestos">PRESUPUESTOS</span>
+        </h2>
+        <div class="login-header">
+            <h1>Hola,<br>Bienvenido de nuevo</h1>
+            <p>Hey, bienvenido a nuestra pagina de gestión de presupuestos.</p>
+        </div>
+        <form class="login-form" action="/PROYECTO_DAM/views" method="POST">
+            <p>Correo</p>
+            <input type="email" placeholder="stanley@gmail.com" id="email" name="email" required />
+            <p>Contraseña</p>
+            <input type="password" placeholder="••••••••••" id="password" name="password" required />
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+    <div class="login-right">
+        <img src="static/assets/login-right_salesianos.jpg" alt="Login Illustration" />
+    </div>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Movimientos</title>
+    <link rel="stylesheet" href="../static/css/historico.css">
+    <link rel="icon" type="image/png" href="../static/assets/logo_favicon.png">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="menu.html">Inicio</a></li>
+            <li><a href="presupuestos.html">Presupuestos</a></li>
+            <li><a href="proveedores.html">Proveedores</a></li>
+            <li><a href="ordenes_compra.html">Órdenes de compra</a></li>
+            <li><a href="historico.html" class="active">Histórico</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+       
+        <section class="filter-section">
+            <form id="filtros">
+              <label for="fecha-inicio">Desde:</label>
+              <input type="date" id="fecha-inicio" name="fecha-inicio" />
+      
+              <label for="fecha-fin">Hasta:</label>
+              <input type="date" id="fecha-fin"name="fecha-fin" />
+      
+              <label for="tipo">Tipo:</label>
+              <select id = "tipo" name="tipo">
+                <option value="">Todos</option>
+                <option value="presupuesto">Presupuesto</option>
+                <option value="orden">Orden de Compra</option>
+                <option value="proveedor">Proveedor</option>
+              </select>
+      
+              <label for="estado">Estado:</label>
+              <select id ="estado" name="estado">
+                <option value="">Todos</option>
+                <option value="pendiente">Pendiente</option>
+                <option value="aprobada">Aprobada</option>
+                <option value="rechazada">Rechazada</option>
+              </select>
+      
+              <button type="submit">Filtrar</button>
+            </form>
+          </section>
+      
+          <section class="table-section">
+            <table id="tabla-registros">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Fecha</th>
+                  <th>Tipo</th>
+                  <th>Descripción</th>
+                  <th>Importe</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Ejemplo de registro -->
+                <tr>
+                  <td>501</td>
+                  <td>2025-03-14</td>
+                  <td>Orden de Compra</td>
+                  <td>Compra de licencias software</td>
+                  <td>1.200 €</td>
+                  <td>Aprobada</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+    </div>
+
+
+<footer>
+    <p>&copy;Salesianos Zaragoza. Todos los derechos reservados</p>
+
+</footer>
+
+<script src="script/filtrosTablas.js"></script>
+</body>
+
+</html>

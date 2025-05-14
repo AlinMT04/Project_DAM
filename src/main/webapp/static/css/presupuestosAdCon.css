@@ -72,7 +72,7 @@ h2 {
 .tabla-presupuestos table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0;
+  border-spacing: 0 8px; /*mirar esto a 0 o así*/
   margin-top: 1.5rem;
   border-radius: 10px;
   overflow: hidden;
@@ -84,6 +84,7 @@ h2 {
   color: white;
   padding: 1rem;
   font-size: 0.95rem;
+  text-align: center;
 }
 
 .tabla-presupuestos td {
@@ -95,6 +96,7 @@ h2 {
 
 .tabla-presupuestos td:last-child {
   border-right: none;
+  padding-left: 1.5rem;
 }
 
 .tabla-presupuestos tbody tr {

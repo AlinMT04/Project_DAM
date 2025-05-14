@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presupuestos - Administración</title>
+  <link rel="stylesheet" href="../static/css/presupuestosAdCon.css" />
+  <link rel="icon" type="image/png" href="../static/assets/logo_favicon.png" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="menu.html">Inicio</a></li>
+      <li><a href="presupuestosAdCon.html" class="active">Presupuestos</a></li>
+      <li><a href="proveedores.html">Proveedores</a></li>
+      <li><a href="ordenes_compra.html">Órdenes de compra</a></li>
+      <li><a href="historico.html">Histórico</a></li>
+    </ul>
+  </nav>
+
+  <div class="contenido">
+    <h1>Gestión de Presupuestos por Departamento</h1>
+    <!-- <p>Visualización y edición de presupuestos e inversiones.</p>  -->
+
+    <!-- Tabla de presupuestos -->
+    <section class="tabla-presupuestos">
+      
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Departamento</th>
+            <th>Año</th>
+            <th>Total</th>
+            <th>Fungible</th>
+            <th>Inversiones</th>
+            <th>Disponible Fungible</th>
+            <th>Disponible Inversiones</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>TI</td>
+            <td>2025</td>
+            <td>45000</td>
+            <td>15000</td>
+            <td>30000</td>
+            <td>10000</td>
+            <td>25000</td>
+            <td>
+              <button class="btn-editar">Editar</button>
+            </td>
+          </tr>
+          <!-- Más filas dinámicas desde la base de datos -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Formulario editar / nuevo -->
+    <section class="formulario-edicion">
+      <h2>Editar Presupuesto</h2>
+      <form id="form-presupuesto">
+        <input type="number" placeholder="Año" name="anio" required />
+        <input type="number" placeholder="Total presupuesto" name="total" required />
+        <input type="number" placeholder="Fungible" name="fungible" required />
+        <input type="number" placeholder="Inversiones" name="inversiones" required />
+        <input type="number" placeholder="Disponible Fungible" name="disp_fungible" required />
+        <input type="number" placeholder="Disponible Inversiones" name="disp_inversiones" required />
+        <select name="departamento" required>
+          <option value="">Selecciona un departamento</option>
+          <option value="1">TI</option>
+          <option value="2">Administración</option>
+          <option value="3">Comercial</option>
+        </select>
+        <button type="submit">Guardar</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; Salesianos Zaragoza. Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>

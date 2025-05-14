@@ -90,14 +90,17 @@ h2 {
   padding: 0.9rem;
   font-size: 0.95rem;
   border-bottom: 1px solid #eee;
+  border-right: 1px solid #ddd;
 }
 
-.tabla-presupuestos tr:nth-child(even) {
-  background-color: #fdfdfd;
+.tabla-presupuestos td:last-child {
+  border-right: none;
 }
 
-.tabla-presupuestos tr:nth-child(odd) {
-  background-color: #f3f3f3;
+.tabla-presupuestos tbody tr {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
 }
 
 .tabla-presupuestos td.presupuesto {

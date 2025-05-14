@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.caja {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  margin-right: -700px;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #ffffff 0%,
+    #ffffff 5%,
+    transparent 5%,
+    transparent 40%,
+    #ffffff 50%
+  );
+  filter: drop-shadow(0 15px 50px #000);
+  border-radius: 20px;
+  margin-left: 0%;
+  animation: rotating 4s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+@keyframes rotating {
+  0% {
+    --a: 0deg;
+  }
+
+  0% {
+    --a: 360deg;
+  }
+}
+
+.caja::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #ffffff 0%,
+    #ffffff 5%,
+    transparent 5%,
+    transparent 40%,
+    #ffffff 50%
+  );
+  filter: drop-shadow(0 15px 50px #000);
+  border-radius: 20px;
+  animation: rotating 4s linear infinite;
+  animation-delay: -1s;
+}
+
+.caja::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #e90a0a;
+  border-radius: 15px;
+  border: 8px solid #ce1919;
+}
+
+.caja:hover {
+  width: 450px;
+  height: 500px;
+}
+
+.caja:hover .login {
+  inset: 40px;
+}
+
+.caja:hover .cajaLogin {
+  transform: translateY(0px);
+}
+
+.login {
+  position: absolute;
+  inset: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background: #00000033;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: inset 0 10px 20px #00000080;
+  border-bottom: 2px solid #ffffff80;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.cajaLogin {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  width: 80%;
+  transform: translateY(126px);
+  transition: 0.5s;
+  size: 20px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  border-left: 45%;
+}
+
+h2 i {
+  color: #ff4784;
+  text-shadow: 0 0 5px #ff4784, 0 0 20px #ff2770;
+}
+
+input {
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  font-size: 1em;
+  color: #fff;
+  background: #0000001a;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+input[type="submit"] {
+  background: #f5f7f7;
+  border: none;
+  font-weight: 500;
+  color: #111;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0 0 10px #f5f7f7, 0 0 60px #f5f7f7;
+}
+
+.grupo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grupo a {
+  color: #FFFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.grupo a:nth-child(2) {
+  color: #FFFF;
+  font-weight: 600;
+}
+
+img{
+
+  max-width: 250px;
+  height: auto;  
+  margin-top: -130%;
+  margin-bottom: -90%;
+  margin-left: -60%;
+}
+
+/* Estilos para el pie de pagina */
+
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ce1919;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+
+footer p {
+  margin: 0;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Órdenes de Compra</title>
+  <link rel="stylesheet" href="../static/css/ordenes_compra.css" />
+  <link rel="icon" type="image/png" href="../static/assets/logo_favicon.png" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="menu.html">Inicio</a></li>
+      <li><a href="presupuestos.html">Presupuestos</a></li>
+      <li><a href="proveedores.html">Proveedores</a></li>
+      <li><a href="ordenes_compra.html" class="active">Órdenes de compra</a></li>
+      <li><a href="historico.html">Histórico</a></li>
+    </ul>
+  </nav>
+
+  <div class="contenido">
+    <h1>Órdenes de Compra</h1>
+
+    <!-- Tabla -->
+    <section class="tabla-ordenes">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Proveedor</th>
+            <th>Departamento</th>
+            <th>Concepto</th>
+            <th>Importe (€)</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>2025-05-10</td>
+            <td>Ofimática 2000</td>
+            <td>TI</td>
+            <td>Ordenadores portátiles</td>
+            <td>3.200</td>
+            <td>Aprobada</td>
+            <td>
+              <button class="btn-editar">Editar</button>
+              <button class="btn-eliminar">Eliminar</button>
+              <button class="btn-pdf">Añadir PDF</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Formulario para nueva orden -->
+    <section class="formulario-orden">
+      <h2>Nueva Orden de Compra</h2>
+      <form id="form-orden" method="POST" enctype="multipart/form-data"><!-- soporte para subir PDF -->
+        <input type="date" name="fecha" required />
+        <input type="text" name="proveedor" placeholder="Proveedor" required />
+        <input type="text" name="departamento" placeholder="Departamento" required />
+        <input type="text" name="concepto" placeholder="Concepto" required />
+        <input type="number" name="importe" placeholder="Importe en €" step="0.01" required />
+        <select name="estado" required>
+          <option value="">Estado</option>
+          <option value="Pendiente">Pendiente</option>
+          <option value="Aprobada">Aprobada</option>
+          <option value="Rechazada">Rechazada</option>
+        </select>
+      <!-- mirar tipo de botón -->
+        <button type="submit" type="pdf">Guardar</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; Salesianos Zaragoza. Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
